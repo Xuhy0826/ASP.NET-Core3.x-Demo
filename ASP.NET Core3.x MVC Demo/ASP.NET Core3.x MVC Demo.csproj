@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>ASP.NET_Core3.x_MVC_Demo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Shared.Common.csproj" />
+    <ProjectReference Include="..\Demo.Dto\Demo.Dto.csproj" />
+  </ItemGroup>
+
+
+
+</Project>

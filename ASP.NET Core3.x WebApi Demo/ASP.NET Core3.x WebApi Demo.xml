@@ -1,0 +1,220 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ASP.NET Core3.x WebApi Demo</name>
+    </assembly>
+    <members>
+        <member name="M:ASP.NET_Core3.x_WebApi_Demo.Controllers.EmployeesController.GetEmployees(ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeQueryDto)">
+            <summary>
+            获取“员工”数据（分页）
+            </summary>
+            <param name="parameters"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ASP.NET_Core3.x_WebApi_Demo.Controllers.EmployeesController.GetEmployee(System.Guid,System.String)">
+            <summary>
+            根据Id获取当个员工数据
+            </summary>
+            <param name="employeeId">员工Id</param>
+            <param name="mediaType">请求的媒体类型，可选值“application/json”或“application/vnd.demo.hateoas+json”</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASP.NET_Core3.x_WebApi_Demo.Controllers.EmployeesController.CreateEmployee(ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeAddDto)">
+            <summary>
+            创建一个“员工”数据
+            </summary>
+            <param name="employeeAddDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ASP.NET_Core3.x_WebApi_Demo.Controllers.EmployeesController.UpdateEmployee(System.Guid,ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeUpdateDto)">
+            <summary>
+            更新“员工”数据
+            </summary>
+            <param name="employeeId">“员工”ID</param>
+            <param name="employee"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ASP.NET_Core3.x_WebApi_Demo.Controllers.EmployeesController.PartiallyUpdateEmployee(System.Guid,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeUpdateDto})">
+            <summary>
+            局部更新一个“员工”的数据
+            </summary>
+            <param name="employeeId">“员工”ID</param>
+            <param name="patchDocument"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ASP.NET_Core3.x_WebApi_Demo.Controllers.EmployeesController.DeleteEmployee(System.Guid)">
+            <summary>
+            删除“员工”数据
+            </summary>
+            <param name="employeeId">员工Id（Guid）</param>
+            <returns></returns>
+        </member>
+        <member name="M:ASP.NET_Core3.x_WebApi_Demo.Controllers.EmployeesController.GetOptions">
+            <summary>
+            控制器功能
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeDto.Id">
+            <summary>
+            员工ID
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeDto.DepartmentId">
+            <summary>
+            关联的部门Id
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeDto.EmployeeNo">
+            <summary>
+            员工工号
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeDto.Name">
+            <summary>
+            员工姓名
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeDto.GenderDes">
+            <summary>
+            员工性别
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeDto.Age">
+            <summary>
+            员工年龄
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeQueryDto.EmployeeNo">
+            <summary>
+            员工的工号
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeQueryDto.Name">
+            <summary>
+            员工的姓名
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeQueryDto.Gender">
+            <summary>
+            员工的性别
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.QueryBase.PageNumber">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.QueryBase.PageSize">
+            <summary>
+            每页显示数量
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.QueryBase.OrderBy">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Dtos.QueryBase.SearchTerm">
+            <summary>
+            查询关键字
+            </summary>
+        </member>
+        <member name="T:ASP.NET_Core3.x_WebApi_Demo.Entities.Department">
+            <summary>
+            “部门”实体类
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Entities.Department.Id">
+            <summary>
+            部门Id
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Entities.Department.Code">
+            <summary>
+            部门编码
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Entities.Department.Name">
+            <summary>
+            部门名称
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Entities.Department.Employees">
+            <summary>
+            部门下员工（导航属性）
+            </summary>
+        </member>
+        <member name="T:ASP.NET_Core3.x_WebApi_Demo.Entities.Employee">
+            <summary>
+            “员工”实体类
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Entities.Employee.Id">
+            <summary>
+            员工ID
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Entities.Employee.DepartmentId">
+            <summary>
+            关联的部门Id
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Entities.Employee.EmployeeNo">
+            <summary>
+            员工工号
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Entities.Employee.Name">
+            <summary>
+            员工姓名
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Entities.Employee.Gender">
+            <summary>
+            员工性别
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Entities.Employee.BirthDay">
+            <summary>
+            员工生日
+            </summary>
+        </member>
+        <member name="P:ASP.NET_Core3.x_WebApi_Demo.Entities.Employee.Department">
+            <summary>
+            部门
+            </summary>
+        </member>
+        <member name="T:ASP.NET_Core3.x_WebApi_Demo.Entities.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="M:ASP.NET_Core3.x_WebApi_Demo.Repository.EmployeeRepository.GetEmployeesAsync(ASP.NET_Core3.x_WebApi_Demo.Dtos.EmployeeQueryDto)">
+            <summary>
+            获取“员工”数据
+            </summary>
+            <param name="queryParams"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ASP.NET_Core3.x_WebApi_Demo.Repository.EmployeeRepository.GetEmployeeAsync(System.Guid)">
+            <summary>
+            根据id获取员工信息
+            </summary>
+            <param name="employeeId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ASP.NET_Core3.x_WebApi_Demo.Repository.EmployeeRepository.AddEmployee(ASP.NET_Core3.x_WebApi_Demo.Entities.Employee)">
+            <summary>
+            增加“员工”
+            </summary>
+            <param name="employee"></param>
+        </member>
+        <member name="M:ASP.NET_Core3.x_WebApi_Demo.Repository.EmployeeRepository.UpdateEmployee(ASP.NET_Core3.x_WebApi_Demo.Entities.Employee)">
+            <summary>
+            更新
+            </summary>
+            <param name="employee"></param>
+        </member>
+    </members>
+</doc>
