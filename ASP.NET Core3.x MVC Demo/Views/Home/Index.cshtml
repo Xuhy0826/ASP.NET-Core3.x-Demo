@@ -1,8 +1,28 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "MVC Demo";
 }
+@model IEnumerable<Demo.Dto.Dtos.EmployeeDto>
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <table id="tabLog" class="table">
+        <thead>
+            <tr>
+                <th class="text-center" style="border:0px">员工工号</th>
+                <th class="text-center" style="border:0px">员工姓名</th>
+                <th class="text-center" style="border:0px">员工性别</th>
+                <th class="text-center" style="border:0px">员工年龄</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.EmployeeNo</td>
+                    <td>@item.Name</td>
+                    <td>@item.GenderDes</td>
+                    <td>@item.Age</td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>

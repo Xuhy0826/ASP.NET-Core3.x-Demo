@@ -43,9 +43,7 @@ namespace ASP.NET_Core3.x_WebApi_Demo.Controllers
         /// 根据Id获取当个员工数据
         /// </summary>
         /// <param name="employeeId">员工Id</param>
-        /// <param name="mediaType">请求的媒体类型，可选值“application/json”或“application/vnd.demo.hateoas+json”</param>
         /// <returns></returns>
-        [Produces("application/json", "application/vnd.demo.hateoas+json")]
         [HttpGet("{employeeId}", Name = nameof(GetEmployee))]
         public async Task<IActionResult> GetEmployee([FromRoute]Guid employeeId, [FromHeader(Name = "Accept")] string mediaType)
         {
@@ -68,7 +66,6 @@ namespace ASP.NET_Core3.x_WebApi_Demo.Controllers
         /// <param name="employeeAddDto"></param>
         /// <returns></returns>
         [HttpPost(Name = nameof(CreateEmployee))]
-        [Produces("application/json", "application/vnd.demo.hateoas+json")]
         public async Task<ActionResult<EmployeeDto>> CreateEmployee([FromBody]EmployeeAddDto employeeAddDto)
         {
             var entity = _mapper.Map<Employee>(employeeAddDto);

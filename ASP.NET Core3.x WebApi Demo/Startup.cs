@@ -123,7 +123,6 @@ namespace ASP.NET_Core3.x_WebApi_Demo
                     });
                 });
             }
-
             //app.UseHttpsRedirection();
 
             app.UseRouting();

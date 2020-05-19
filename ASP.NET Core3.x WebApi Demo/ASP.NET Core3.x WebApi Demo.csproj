@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ASP.NET Core3.x WebApi Demo.xml" />
     <None Remove="demo.db-shm" />
     <None Remove="demo.db-wal" />
   </ItemGroup>
