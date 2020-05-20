@@ -23,6 +23,7 @@ namespace ASP.NET_Core3.x_MVC_Demo
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //从配置中读取WebApi的地址
             services.AddHttpClient<DemoApiHttpClient>(client =>
             {
                 client.BaseAddress = new Uri(Configuration["DemoApiUri"]);
