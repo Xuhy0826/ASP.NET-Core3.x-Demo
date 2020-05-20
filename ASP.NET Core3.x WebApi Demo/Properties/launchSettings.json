@@ -1,14 +1,20 @@
-﻿{
+{
   "$schema": "http://json.schemastore.org/launchsettings.json",
   "profiles": {
     "ASP.NET_Core3.x_WebApi_Demo": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "http://localhost:10086/index.html",
-      "applicationUrl": "http://localhost:10086",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "applicationUrl": "http://localhost:10086"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/index.html",
+      "publishAllPorts": true
     }
   }
 }
