@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.29911.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shared.Common", "Common\Shared.Common.csproj", "{038242CD-B8CF-41F9-9626-D046CCD34474}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ASP.NET Core3.x MVC Demo", "ASP.NET Core3.x MVC Demo\ASP.NET Core3.x MVC Demo.csproj", "{F9130F98-95E3-4F52-90AC-04BAA358A7DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASP.NET Core3.x MVC Demo", "ASP.NET Core3.x MVC Demo\ASP.NET Core3.x MVC Demo.csproj", "{F9130F98-95E3-4F52-90AC-04BAA358A7DB}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ASP.NET Core3.x WebApi Demo", "ASP.NET Core3.x WebApi Demo\ASP.NET Core3.x WebApi Demo.csproj", "{8C91B906-0757-4283-8A74-F31BEBC02B5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.Dto", "Demo.Dto\Demo.Dto.csproj", "{E0605B83-9208-4043-B07A-F63D9B92D954}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Demo.Dto", "Demo.Dto\Demo.Dto.csproj", "{E0605B83-9208-4043-B07A-F63D9B92D954}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

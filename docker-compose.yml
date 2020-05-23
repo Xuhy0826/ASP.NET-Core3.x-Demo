@@ -1,0 +1,32 @@
+version: '3.4'
+
+services:
+  mvc_demo:
+    build:
+      context: .
+      dockerfile : ./ASP.NET Core3.x MVC Demo/Dockerfile
+    container_name : mvcdemo 
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8081:80"
+    networks:
+      - demo-net
+    restart: always
+    depends_on: 
+      - api_demo
+
+  api_demo:
+    build:
+      context: .
+      dockerfile : ./ASP.NET Core3.x WebApi Demo/Dockerfile
+    container_name : webapidemo
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    networks:
+      - demo-net
+    restart: always
+
+networks:
+  demo-net:
+    driver : bridge
